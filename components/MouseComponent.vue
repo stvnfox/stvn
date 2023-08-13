@@ -22,7 +22,7 @@
 <template>
     <div
         :class="color"
-        class="absolute -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none blur-3xl"
+        class="hidden lg:block absolute -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none blur-3xl"
         :style="{
             left: `${x}px`,
             top: `${y}px`,

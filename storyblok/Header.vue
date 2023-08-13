@@ -48,14 +48,14 @@
                 :class="statusWrapperClass"
                 class="flex items-center gap-3 w-fit rounded py-3 px-4 mb-8"
             >
-                <div class="relative flex h-2 w-2">
+                <div class="relative flex h-2.5 w-2.5">
                     <span
                         :class="statusOuterPulseClass"
                         class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
                     />
                     <span
                         :class="statusInnerPulseClass"
-                        class="relative inline-flex rounded-full h-2 w-2"
+                        class="relative inline-flex rounded-full h-2.5 w-2.5"
                     />
                 </div>
                 <p
@@ -65,7 +65,7 @@
                 />
             </div>
             <h1
-                class="text-6xl font-normal mb-3"
+                class="text-4xl md:text-6xl font-normal mb-3"
                 v-text="blok.title"
             />
             <p
