@@ -40,7 +40,7 @@
 <template>
     <div
         v-editable="blok"
-        class="w-screen h-screen flex items-center justify-center overflow-hidden text-neutral-200"
+        class="h-screen flex items-center justify-center overflow-hidden text-neutral-200"
     >
         <MouseComponent :color="mouseColor" />
         <div class="flex flex-col items-center z-10">
