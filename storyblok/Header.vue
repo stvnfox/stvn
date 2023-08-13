@@ -1,59 +1,77 @@
 <script setup>
-    import { useMouseInElement } from "@vueuse/core";
-
     const props = defineProps({ blok: Object });
 
-    const headerCard = ref(null);
+    const articleContent = computed(() => renderRichText(props.blok.intro));
 
-    const articleContent = computed(() => renderRichText(props.blok.Intro));
+    const mouseColor = computed(() => {
+        if (props.blok.status === "available") return "bg-green-900/80";
 
-    const cardTransform = computed(() => {
-        const MAX_ROTATION = 6;
-
-        const xRotation = (
-            MAX_ROTATION / 2 -
-            (elementY.value / elementHeight.value) * MAX_ROTATION
-        ).toFixed(2);
-        const yRotation = (
-            (elementX.value / elementHeight.value) * MAX_ROTATION -
-            MAX_ROTATION / 2
-        ).toFixed(2);
-
-        return isOutside.value
-            ? ""
-            : `perspective(${elementWidth.value}px) rotateX(${xRotation}deg) rotateY(${yRotation}deg)`;
+        return "bg-red-900/80";
     });
 
-    const { elementX, elementY, isOutside, elementHeight, elementWidth } =
-        useMouseInElement(headerCard);
+    const statusWrapperClass = computed(() => {
+        if (props.blok.status === "available") return "bg-green-900/60";
+
+        return "bg-red-900/60";
+    });
+
+    const statusInnerPulseClass = computed(() => {
+        if (props.blok.status === "available") return "bg-green-700";
+        return "bg-red-800";
+    });
+
+    const statusOuterPulseClass = computed(() => {
+        if (props.blok.status === "available") return "bg-green-600";
+        return "bg-red-900";
+    });
+
+    const statusTextClass = computed(() => {
+        if (props.blok.status === "available") return "text-green-600";
+        return "text-red-600";
+    });
+
+    const statusText = computed(() => {
+        if (props.blok.status === "available")
+            return "Beschikbaar voor nieuwe projecten";
+        return "Niet beschikbaar voor nieuwe projecten";
+    });
 </script>
 
 <template>
     <div
         v-editable="blok"
-        ref="headerCard"
-        :style="{
-            transform: cardTransform,
-            transformStyle: 'preserve-3d',
-            transition: 'transform 0.25s ease-out',
-            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${blok.Image.filename})`,
-        }"
-        class="w-11/12 lg:w-3/4 xl:w-2/3 mx-auto font-sans text-neutral-200 text-center bg-cover will-change-transform py-32 lg:py-56 mt-24"
+        class="w-screen h-screen flex items-center justify-center overflow-hidden text-neutral-200"
     >
-        <div
-            :style="{
-                transform: 'translate3d(0, 0, 48px)',
-                transformStyle: 'preserve-3d',
-            }"
-            className="position-relative z-10"
-        >
-            <h1
-                class="text-6xl font-bold mb-3"
-                v-text="blok.Title"
-            />
+        <MouseComponent :color="mouseColor" />
+        <div class="flex flex-col items-center z-10">
             <div
+                :class="statusWrapperClass"
+                class="flex items-center gap-3 w-fit rounded py-3 px-4 mb-8"
+            >
+                <div class="relative flex h-2 w-2">
+                    <span
+                        :class="statusOuterPulseClass"
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                    />
+                    <span
+                        :class="statusInnerPulseClass"
+                        class="relative inline-flex rounded-full h-2 w-2"
+                    />
+                </div>
+                <p
+                    :class="statusTextClass"
+                    class="text-xs font-medium"
+                    v-text="statusText"
+                />
+            </div>
+            <h1
+                class="text-6xl font-normal mb-3"
+                v-text="blok.title"
+            />
+            <p
+                v-if="blok.intro"
                 class="w-5/6 xl:w-1/2 text-neutral-200 mx-auto"
-                v-html="articleContent"
+                v-text="blok.intro"
             />
         </div>
     </div>

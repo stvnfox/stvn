@@ -10,6 +10,9 @@ module.exports = {
         "storyblok/**/*.{vue,js}",
     ],
     theme: {
+        fontFamily: {
+            sans: ["Quicksand", "sans-serif"],
+        },
         extend: {},
     },
     plugins: [],

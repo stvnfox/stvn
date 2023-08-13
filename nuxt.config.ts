@@ -3,6 +3,14 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: [
         "@nuxtjs/tailwindcss",
+        [
+            "@nuxtjs/google-fonts",
+            {
+                families: {
+                    Quicksand: [300, 400, 500],
+                },
+            },
+        ],
         ["@storyblok/nuxt", { accessToken: "PqcWMOZyvok90r8kVplKTgtt" }],
     ],
 });
