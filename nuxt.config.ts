@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import dotenv from "dotenv";
+
+dotenv.config();
+
 export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: [
@@ -11,6 +15,6 @@ export default defineNuxtConfig({
                 },
             },
         ],
-        ["@storyblok/nuxt", { accessToken: "PqcWMOZyvok90r8kVplKTgtt" }],
+        ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
     ],
 });
