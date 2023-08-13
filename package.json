@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@storyblok/nuxt": "^5.6.2",
+    "@vueuse/core": "^10.3.0",
     "isomorphic-fetch": "^3.0.0"
   }
 }
