@@ -3,15 +3,21 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate-sb-types": "storyblok-generate-ts source=./components.246480.json target=./component-types-sb"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5"
+    "nuxt": "^3.6.5",
+    "storyblok-generate-ts": "^1.15.0"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^5.6.2",
+    "isomorphic-fetch": "^3.0.0"
   }
 }
