@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: [
         "@nuxtjs/tailwindcss",
+        "@vueuse/motion/nuxt",
         [
             "@nuxtjs/google-fonts",
             {

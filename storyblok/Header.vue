@@ -45,6 +45,10 @@
         <MouseComponent :color="mouseColor" />
         <div class="flex flex-col items-center z-10">
             <div
+                v-motion
+                :initial="{ opacity: 0 }"
+                :enter="{ opacity: 1 }"
+                :delay="800"
                 :class="statusWrapperClass"
                 class="flex items-center gap-3 w-fit rounded py-3 px-4 mb-8"
             >
@@ -65,12 +69,39 @@
                 />
             </div>
             <h1
+                v-motion
+                :initial="{ opacity: 0, y: 10 }"
+                :enter="{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                        type: 'spring',
+                        stiffness: 350,
+                        damping: 50,
+                        mass: 2.5,
+                    },
+                }"
+                :delay="400"
                 class="text-4xl md:text-6xl font-normal mb-3"
                 v-text="blok.title"
             />
             <p
                 v-if="blok.intro"
-                class="w-5/6 xl:w-1/2 text-neutral-200 mx-auto"
+                v-motion
+                :initial="{ opacity: 0, y: -10 }"
+                :enter="{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                        type: 'spring',
+                        stiffness: 350,
+                        damping: 50,
+                        mass: 2.5,
+                    },
+                }"
+                :duration="400"
+                :delay="400"
+                class="w-5/6 xl:w-1/2 text-neutral-200 text-center text-sm mx-auto"
                 v-text="blok.intro"
             />
         </div>
