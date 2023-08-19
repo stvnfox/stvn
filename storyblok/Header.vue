@@ -1,5 +1,9 @@
 <script setup>
+    import gsap from "gsap";
+
     const props = defineProps({ blok: Object });
+
+    const context = ref(null);
 
     const articleContent = computed(() => renderRichText(props.blok.intro));
 
@@ -35,6 +39,29 @@
             return "Beschikbaar voor nieuwe projecten";
         return "Niet beschikbaar voor nieuwe projecten";
     });
+
+    onMounted(() => {
+        var tl = gsap.timeline();
+
+        tl.fromTo(
+            "#title-element",
+            { autoAlpha: 0, y: 10 },
+            { autoAlpha: 1, y: 0, delay: 0.6, duration: 1, ease: "power3" }
+        );
+
+        tl.fromTo(
+            "#intro-element",
+            { autoAlpha: 0, y: -10 },
+            { autoAlpha: 1, y: 0, duration: 1, ease: "power3" },
+            "<"
+        );
+
+        tl.fromTo(
+            "#status-block",
+            { autoAlpha: 0 },
+            { autoAlpha: 1, duration: 0.8 }
+        );
+    });
 </script>
 
 <template>
@@ -45,10 +72,7 @@
         <MouseComponent :color="mouseColor" />
         <div class="flex flex-col items-center z-10">
             <div
-                v-motion
-                :initial="{ opacity: 0 }"
-                :enter="{ opacity: 1 }"
-                :delay="800"
+                id="status-block"
                 :class="statusWrapperClass"
                 class="flex items-center gap-3 w-fit rounded py-3 px-4 mb-8"
             >
@@ -69,38 +93,13 @@
                 />
             </div>
             <h1
-                v-motion
-                :initial="{ opacity: 0, y: 10 }"
-                :enter="{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        type: 'spring',
-                        stiffness: 350,
-                        damping: 50,
-                        mass: 2.5,
-                    },
-                }"
-                :delay="400"
+                id="title-element"
                 class="text-4xl md:text-6xl font-normal mb-3"
                 v-text="blok.title"
             />
             <p
                 v-if="blok.intro"
-                v-motion
-                :initial="{ opacity: 0, y: -10 }"
-                :enter="{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        type: 'spring',
-                        stiffness: 350,
-                        damping: 50,
-                        mass: 2.5,
-                    },
-                }"
-                :duration="400"
-                :delay="400"
+                id="intro-element"
                 class="w-5/6 xl:w-1/2 text-neutral-200 text-center text-sm mx-auto"
                 v-text="blok.intro"
             />
