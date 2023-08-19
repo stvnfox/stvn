@@ -3,8 +3,6 @@
 
     const props = defineProps({ blok: Object });
 
-    const articleContent = computed(() => renderRichText(props.blok.intro));
-
     const mouseColor = computed(() => {
         if (props.blok.status === "available") return "bg-green-900/80";
 
