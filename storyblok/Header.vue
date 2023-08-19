@@ -3,8 +3,6 @@
 
     const props = defineProps({ blok: Object });
 
-    const context = ref(null);
-
     const articleContent = computed(() => renderRichText(props.blok.intro));
 
     const mouseColor = computed(() => {
