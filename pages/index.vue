@@ -2,8 +2,6 @@
     import gsap from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    gsap.registerPlugin(ScrollTrigger);
-
     useSeoMeta({
         title: "Steven Vos - Front-end Developer",
         ogTitle: "Steven Vos - Front-end Developer",
@@ -34,6 +32,8 @@
     ];
 
     onMounted(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         let screenComponents = gsap.utils.toArray("[data-screen-component]");
 
         screenComponents.forEach((screen) => {

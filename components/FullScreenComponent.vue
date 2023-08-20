@@ -2,8 +2,6 @@
     import gsap from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    gsap.registerPlugin(ScrollTrigger);
-
     const props = defineProps<{
         id: string;
         title: string;
@@ -11,6 +9,8 @@
     }>();
 
     onMounted(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: `#${props.id}`,
