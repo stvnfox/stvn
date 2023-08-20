@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-        @apply bg-black font-sans;
+        @apply bg-black overflow-x-hidden font-sans;
     }
 }
