@@ -61,9 +61,10 @@
 </script>
 
 <template>
+    <!-- data-screen-component="header-component" -->
     <div
         v-editable="blok"
-        class="h-screen flex items-center justify-center overflow-hidden text-neutral-200"
+        class="h-screen flex items-center justify-center cursor-none overflow-hidden text-neutral-200"
     >
         <MouseComponent :color="mouseColor" />
         <div class="flex flex-col items-center z-10">
