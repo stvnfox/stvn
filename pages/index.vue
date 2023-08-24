@@ -40,7 +40,7 @@
             ScrollTrigger.create({
                 trigger: screen,
                 start: "top top",
-                end: "bottom 10px",
+                end: "bottom 0",
                 pin: true,
                 pinSpacing: false,
             });
@@ -53,6 +53,7 @@
         v-if="story"
         :blok="story.content"
     />
+    <!-- TODO: Storyblok component van maken -->
     <FullScreenComponent
         v-for="item in screens"
         :key="item.id"
@@ -60,4 +61,5 @@
         :title="item.title"
         :intro="item.intro"
     />
+    <FooterComponent />
 </template>
