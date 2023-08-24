@@ -62,7 +62,9 @@
                         Instagram
                     </span>
                 </a>
-                <div class="md:text-end text-neutral-400">© 2023 Steven</div>
+                <div class="md:text-end text-neutral-400 text-xs">
+                    © 2023 Steven
+                </div>
             </div>
         </div>
     </footer>
