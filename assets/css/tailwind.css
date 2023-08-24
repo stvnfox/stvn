@@ -7,3 +7,9 @@
         @apply bg-black overflow-x-hidden font-sans;
     }
 }
+
+@layer utilities {
+    .underline-hover {
+        @apply relative after:absolute after:rounded-lg after:-bottom-[4px] after:left-0 after:h-[2px] after:w-0 after:transition-all after:delay-100 after:ease-in-out group-hover:after:w-full;
+    }
+}

@@ -22,14 +22,14 @@
 
         tl.fromTo(
             `#title-${props.id}`,
-            { autoAlpha: 0 },
-            { autoAlpha: 1, duration: 0.5 }
+            { autoAlpha: 0, y: 100 },
+            { autoAlpha: 1, y: 0, duration: 0.5 }
         );
 
         tl.fromTo(
             `#intro-${props.id}`,
-            { autoAlpha: 0 },
-            { autoAlpha: 1, duration: 0.5 },
+            { autoAlpha: 0, y: 100 },
+            { autoAlpha: 1, y: 0, duration: 0.5 },
             "<"
         );
     });
@@ -39,7 +39,7 @@
     <section
         :data-screen-component="id"
         :id="id"
-        class="h-screen flex flex-col items-center justify-center text-white bg-black border-t border-t-neutral-700"
+        class="h-screen flex flex-col items-center justify-center text-white bg-black border-t border-t-neutral-700/40"
     >
         <h2
             class="text-6xl mb-4"
