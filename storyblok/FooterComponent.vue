@@ -6,17 +6,21 @@
         class="bg-gradient-to-b from-transparent via-black/70 via-30% to-black h-screen flex"
     >
         <div
-            class="flex flex-col bg-black/80 border-t border-t-neutral-700/40 w-full text-white h-[50vh] self-end py-16 px-48"
+            class="flex flex-col bg-black/80 border-t border-t-neutral-700/40 w-full text-white h-[50vh] self-end p-8 md:py-16 lg:px-48"
         >
             <div class="flex-grow">
-                <h2 class="text-5xl mb-6">Samen mooie dingen maken?</h2>
-                <h3 class="text-4xl text-neutral-400">hello@stvnx.nl</h3>
+                <h2 class="text-3xl md:text-5xl mb-6">
+                    Samen mooie dingen maken?
+                </h2>
+                <h3 class="text-2xl md:text-4xl text-neutral-400">
+                    hello@stvnx.nl
+                </h3>
             </div>
 
-            <div class="grid grid-cols-3">
+            <div class="grid md:grid-cols-3">
                 <a
                     href=""
-                    class="flex items-center group"
+                    class="flex items-center group mb-4 md:mb-0"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +42,7 @@
                 </a>
                 <a
                     href=""
-                    class="flex items-center group"
+                    class="flex items-center group mb-4 md:mb-0"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +62,7 @@
                         Instagram
                     </span>
                 </a>
-                <div class="text-end text-neutral-400">© 2023 Steven</div>
+                <div class="md:text-end text-neutral-400">© 2023 Steven</div>
             </div>
         </div>
     </footer>
