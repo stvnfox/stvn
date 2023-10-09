@@ -1,37 +1,37 @@
-<script setup>
+<script lang="ts" setup>
     import gsap from "gsap";
 
     const props = defineProps({ blok: Object });
 
     const mouseColor = computed(() => {
-        if (props.blok.status === "available") return "bg-green-900/80";
+        if (props.blok?.status === "available") return "bg-green-900/80";
 
         return "bg-red-900/80";
     });
 
     const statusWrapperClass = computed(() => {
-        if (props.blok.status === "available") return "bg-green-900/60";
+        if (props.blok?.status === "available") return "bg-green-900/60";
 
         return "bg-red-900/60";
     });
 
     const statusInnerPulseClass = computed(() => {
-        if (props.blok.status === "available") return "bg-green-700";
+        if (props.blok?.status === "available") return "bg-green-700";
         return "bg-red-800";
     });
 
     const statusOuterPulseClass = computed(() => {
-        if (props.blok.status === "available") return "bg-green-600";
+        if (props.blok?.status === "available") return "bg-green-600";
         return "bg-red-900";
     });
 
     const statusTextClass = computed(() => {
-        if (props.blok.status === "available") return "text-green-600";
+        if (props.blok?.status === "available") return "text-green-600";
         return "text-red-600";
     });
 
     const statusText = computed(() => {
-        if (props.blok.status === "available")
+        if (props.blok?.status === "available")
             return "Beschikbaar voor nieuwe projecten";
         return "Niet beschikbaar voor nieuwe projecten";
     });
@@ -61,7 +61,6 @@
 </script>
 
 <template>
-    <!-- data-screen-component="header-component" -->
     <div
         v-editable="blok"
         class="h-screen flex items-center justify-center cursor-none overflow-hidden text-neutral-200"
@@ -92,10 +91,10 @@
             <h1
                 id="title-element"
                 class="text-4xl md:text-6xl font-normal mb-3"
-                v-text="blok.title"
+                v-text="blok?.title"
             />
             <p
-                v-if="blok.intro"
+                v-if="blok?.intro"
                 id="intro-element"
                 class="w-5/6 xl:w-1/2 text-neutral-200 text-center text-sm mx-auto"
                 v-text="blok.intro"
