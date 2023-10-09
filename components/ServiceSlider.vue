@@ -31,7 +31,9 @@
         <ul class="w-1/2">
             <li v-for="(link, idx) in items">
                 <button
-                    :class="{ 'font-semibold': link === selectedItem }"
+                    :class="{
+                        'text-white/50 font-medium': link !== selectedItem,
+                    }"
                     @click="setSelectedItem(idx)"
                 >
                     {{ link.label }}
