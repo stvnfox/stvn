@@ -9,6 +9,7 @@ module.exports = {
         "./app.vue",
         "storyblok/**/*.{vue,js}",
     ],
+    darkMode: 'class',
     theme: {
         fontFamily: {
             sans: ["Quicksand", "sans-serif"],

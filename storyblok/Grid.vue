@@ -5,7 +5,7 @@
 <template>
     <div
         v-editable="blok"
-        class="container mx-auto grid md:grid-cols-3 gap-12 my-12 place-items-center"
+        class="grid md:grid-cols-2 gap-8 md:gap-12"
     >
         <StoryblokComponent
             v-for="blok in blok.columns"
