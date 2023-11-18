@@ -12,10 +12,11 @@ export default defineNuxtConfig({
             "@nuxtjs/google-fonts",
             {
                 families: {
-                    Quicksand: [300, 400, 500],
+                    Lato: [300, 400, 500, 700],
                 },
             },
         ],
         ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
+        "@vueuse/motion/nuxt",
     ],
 });
