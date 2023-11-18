@@ -5,7 +5,6 @@ dotenv.config();
 
 export default defineNuxtConfig({
     devtools: { enabled: true },
-    transpile: ["gsap"],
     modules: [
         "@nuxtjs/tailwindcss",
         [
