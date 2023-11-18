@@ -1,7 +1,4 @@
 <script setup>
-    import gsap from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
     useSeoMeta({
         title: "Steven Vos - Front-end Developer",
         ogTitle: "Steven Vos - Front-end Developer",
@@ -19,5 +16,5 @@
         v-if="story"
         :blok="story.content"
     />
-    <ColorModeSwitcher/>
+    <ColorModeSwitcher />
 </template>

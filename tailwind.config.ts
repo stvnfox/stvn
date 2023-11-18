@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
     content: [
         "./components/**/*.{js,vue,ts}",
@@ -9,10 +10,10 @@ module.exports = {
         "./app.vue",
         "storyblok/**/*.{vue,js}",
     ],
-    darkMode: 'class',
+    darkMode: "class",
     theme: {
         fontFamily: {
-            sans: ["Quicksand", "sans-serif"],
+            sans: ["Lato", "sans-serif"],
         },
         container: {
             center: true,

@@ -1,19 +1,5 @@
 <script setup lang="ts">
-    interface IContent {
-        type: string;
-        content: IContent[];
-    }
-
-    interface IWorkExplanation {
-        type: string;
-        content: IContent[];
-    }
-
-    interface IWork {
-        _uid: string;
-        Label: string;
-        Explanation: IWorkExplanation;
-    }
+    import { FadeIn } from "@/helpers/MotionAnimations";
 
     const props = defineProps<{
         blok: { Label: string; Projects: SBBlokData };
@@ -21,9 +7,9 @@
 </script>
 
 <template>
-    <section>
+    <section v-motion="FadeIn(500)">
         <h2
-            class="font-medium text-2xl md:text-lg mb-4" 
+            class="font-medium text-2xl md:text-lg mb-4"
             v-text="blok.Label"
         />
         <StoryblokComponent
