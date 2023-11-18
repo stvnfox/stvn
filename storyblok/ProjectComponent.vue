@@ -8,7 +8,7 @@
 
 <template>
     <section class="mb-3">
-        <a 
+        <a
             :href="blok.Link"
             target="_blank"
             rel="noopener noreferrer"
@@ -18,7 +18,7 @@
                 class="underline-hover after:bg-neutral-400 dark:after:bg-neutral-700 font-medium"
                 v-text="blok.Label"
             />
-            <svg 
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -34,7 +34,7 @@
             </svg>
         </a>
         <div
-            class="text-sm text-neutral-400 dark:text-neutral-700"
+            class="text-sm font-thin text-neutral-400 dark:text-neutral-700"
             v-html="explanation"
         />
     </section>
