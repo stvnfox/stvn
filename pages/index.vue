@@ -17,4 +17,5 @@
         :blok="story.content"
     />
     <ColorModeSwitcher />
+    <FooterComponent />
 </template>
