@@ -39,10 +39,12 @@
             class="connect font-thin mb-6"
             v-html="introduction"
         />
-        <StoryblokComponent
-            v-for="item in blok.Items"
-            :key="item._uid"
-            :blok="item"
-        />
+        <div class="flex gap-4">
+            <StoryblokComponent
+                v-for="item in blok.Items"
+                :key="item._uid"
+                :blok="item"
+            />
+        </div>
     </section>
 </template>

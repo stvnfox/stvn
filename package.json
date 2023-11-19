@@ -18,6 +18,9 @@
     "storyblok-generate-ts": "^1.15.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.5",
     "@storyblok/nuxt": "^5.6.2",
     "@vueuse/core": "^10.3.0",
     "@vueuse/motion": "^2.0.0",
