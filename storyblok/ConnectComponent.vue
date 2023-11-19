@@ -36,7 +36,7 @@
             v-text="blok.Label"
         />
         <div
-            class="font-thin mb-6"
+            class="connect font-thin mb-6"
             v-html="introduction"
         />
         <StoryblokComponent
