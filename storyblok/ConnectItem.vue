@@ -8,13 +8,10 @@
     <a
         :href="blok.Link"
         target="_blank"
+        :alt="`Click here to go to ${blok.Label}`"
         rel="noopener noreferrer"
-        class="flex items-center group text-neutral-400 dark:text-neutral-900 mb-4 md:mb-3 w-fit"
+        class="flex items-center group text-neutral-400 dark:text-neutral-700 hover:text-neutral-500 hover:dark:text-neutral-900 transition-colors mb-4 md:mb-3 w-fit"
     >
-        <span
-            class="font-thin underline-hover after:bg-neutral-400 dark:after:bg-neutral-900"
-            v-text="blok.Label"
-        />
-        <span v-html="blok.Icon" />
+        <font-awesome-icon :icon="`fa-brands fa-${blok.Icon}`" />
     </a>
 </template>
