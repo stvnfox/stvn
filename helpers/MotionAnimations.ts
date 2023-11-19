@@ -9,7 +9,7 @@ export const FadeIn = (delay: number) => {
             y: 0,
             transition: {
                 delay,
-                duration: 400,
+                duration: 500,
                 type: "keyframes",
                 ease: "easeInOut",
             },
