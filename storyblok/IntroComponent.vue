@@ -19,7 +19,7 @@
         />
         <div
             v-motion="FadeIn(400)"
-            class="font-thin"
+            class="font-thin introduction"
             v-html="introduction"
         />
     </section>

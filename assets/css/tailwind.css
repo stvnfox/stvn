@@ -12,8 +12,22 @@
     }
 }
 
+@layer components {
+    .introduction {
+        p {
+            @apply mb-4 last:mb-0;
+        }
+    }
+
+    .connect {
+        a {
+            @apply relative after:absolute after:rounded-lg after:-bottom-1 after:left-0 after:right-0 after:h-0.5 after:bg-neutral-400 dark:after:bg-neutral-700 hover:text-neutral-500 dark:hover:text-neutral-500 hover:after:bg-neutral-500 hover:dark:after:bg-neutral-500 transition-all;
+        }
+    }
+}
+
 @layer utilities {
     .underline-hover {
-        @apply relative after:absolute after:rounded-lg after:-bottom-[4px] after:left-0 after:h-[2px] after:w-0 after:transition-all after:delay-100 after:ease-in-out group-hover:after:w-full;
+        @apply relative after:absolute after:rounded-lg after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:transition-all after:delay-100 after:ease-in-out group-hover:after:w-full;
     }
 }
