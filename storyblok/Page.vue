@@ -14,5 +14,6 @@
                 :blok="blok"
             />
         </div>
+        <FooterComponent />
     </section>
 </template>
