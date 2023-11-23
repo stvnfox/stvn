@@ -34,7 +34,7 @@
             </svg>
         </a>
         <div
-            class="text-sm font-thin text-neutral-400 dark:text-neutral-700"
+            class="project text-sm font-thin text-neutral-400 dark:text-neutral-700"
             v-html="explanation"
         />
     </section>
