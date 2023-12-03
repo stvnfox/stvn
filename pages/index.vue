@@ -2,10 +2,9 @@
     useSeoMeta({
         title: "Steven Vos - Front-end Developer",
         ogTitle: "Steven Vos - Front-end Developer",
-        description: "Hi, ik ben Steven. En ik maak websites en applicaties.",
-        ogDescription: "Hi, ik ben Steven. En ik maak websites en applicaties.",
-        // ogImage: 'https://example.com/image.png',
-        twitterCard: "summary_large_image",
+        description: "Hi, I'm Steven. And I create websites and applications.",
+        ogDescription:
+            "Hi, I'm Steven. And I create websites and applications.",
     });
 
     const story = await useAsyncStoryblok("home", { version: "draft" });
