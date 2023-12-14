@@ -6,7 +6,7 @@ const MODE = {
 } as const;
 
 export const ColorModeSwitcher = () => {
-    const [mode, setMode] = useState(MODE.LIGHT);
+    const [mode, setMode] = useState("light");
 
     const setTheme = () => {
         const html = document.querySelector("html");
@@ -20,22 +20,22 @@ export const ColorModeSwitcher = () => {
                 break;
         }
 
-        html.classList.toggle(MODE.DARK);
-        html.classList.toggle(MODE.LIGHT);
+        html?.classList.toggle(MODE.DARK);
+        html?.classList.toggle(MODE.LIGHT);
     };
 
     return (
         <button
-            class="absolute top-8 right-[8%] lg:right-1/4"
+            className="absolute top-8 right-[8%] lg:right-1/4"
             onClick={setTheme}
         >
-            {mode === "light" ? (
+            {mode === MODE.LIGHT ? (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    class="w-6 h-6 stroke-neutral-50"
+                    className="w-6 h-6 stroke-neutral-50"
                 >
                     <path
                         stroke-linecap="round"
@@ -49,7 +49,7 @@ export const ColorModeSwitcher = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1"
-                    class="w-6 h-6 stroke-neutral-950"
+                    className="w-6 h-6 stroke-neutral-950"
                 >
                     <path
                         stroke-linecap="round"
