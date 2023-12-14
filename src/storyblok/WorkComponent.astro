@@ -1,0 +1,17 @@
+---
+import { renderRichText } from "@storyblok/astro";
+const { blok } = Astro.props;
+
+const explanation = renderRichText(blok.Explanation);
+---
+
+<section class="mb-3">
+    <h3
+        class="font-medium"
+        set:text={blok.Label}
+    />
+    <div
+        class="text-sm font-thin text-neutral-400 dark:text-neutral-700"
+        set:html={explanation}
+    />
+</section>

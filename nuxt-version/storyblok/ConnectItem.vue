@@ -12,6 +12,6 @@
         rel="noopener noreferrer"
         class="flex items-center group text-neutral-400 dark:text-neutral-700 hover:text-neutral-500 hover:dark:text-neutral-900 transition-colors mb-4 md:mb-3 w-fit"
     >
-        <font-awesome-icon :icon="`fa-brands fa-${blok.Icon}`" />
+        <Icon name="{blok.Icon}" />
     </a>
 </template>
