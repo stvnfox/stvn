@@ -3,6 +3,7 @@ import { loadEnv } from "vite";
 import storyblok from "@storyblok/astro";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
 // https://astro.build/config

@@ -4,16 +4,15 @@
 import "../styles/base.css";
 
 import { useStoryblokApi } from "@storyblok/astro";
-// import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Layout from "../layouts/Layout.astro";
 import FooterComponent from "../components/FooterComponent.astro";
 import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
 
-// const storyblokApi = useStoryblokApi();
-// const { data } = await storyblokApi.get("cdn/stories/home", {
-//     version: import.meta.env.DEV ? "draft" : "published",
-// });
-// <!-- <StoryblokComponent blok={data} /> -->
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/home", {
+    version: import.meta.env.DEV ? "draft" : "published",
+});
 ---
 
 <Layout
@@ -21,6 +20,7 @@ import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
     description="Hi, I'm Steven. And I create websites and applications."
 >
     <main>
+        <StoryblokComponent blok={data} />
         <ColorModeSwitcher client:load />
         <FooterComponent />
     </main>
