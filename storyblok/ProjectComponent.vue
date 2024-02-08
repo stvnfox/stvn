@@ -12,6 +12,7 @@
             :href="blok.Link"
             target="_blank"
             rel="noopener noreferrer"
+            :aria-label="`Click here to go to ${blok.Label}`"
             class="group flex items-center gap-2 w-fit mb-2"
         >
             <span

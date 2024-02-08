@@ -1,4 +1,10 @@
 <script setup>
+    useHead({
+        htmlAttrs: {
+            lang: "en",
+        },
+    })
+
     useSeoMeta({
         title: "Steven Vos - Front-end Developer",
         ogTitle: "Steven Vos - Front-end Developer",
