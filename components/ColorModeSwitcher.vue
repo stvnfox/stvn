@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { useColorMode, usePreferredDark } from '@vueuse/core'
+    import { useColorMode } from '@vueuse/core'
 
     enum ColorMode {
         Dark = 'dark',
@@ -7,6 +7,11 @@
     }
 
     const mode = useColorMode()
+
+    const ariaLabelText = computed(() => {
+        return `Click here to change the theme to ${mode.value === ColorMode.Light ? 'dark' : 'light'} mode`
+    
+    })
 
     const setMode = () => {
         if (mode.value === ColorMode.Dark) {
@@ -22,7 +27,12 @@
 </script>
 
 <template>
-    <button class="absolute top-8 right-[8%] lg:right-1/4" @click="setMode">
+    <button 
+        class="absolute top-8 right-[8%] lg:right-1/4"
+        type="button"
+        :aria-label="ariaLabelText"
+        @click="setMode"
+    >
         <svg 
             v-if="mode === ColorMode.Light"
             xmlns="http://www.w3.org/2000/svg"
