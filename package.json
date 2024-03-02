@@ -15,7 +15,6 @@
     "@nuxtjs/tailwindcss": "^6.11.3",
     "@types/node": "^20.11.16",
     "nuxt": "^3.10.1",
-    "nuxt-vercel-analytics": "^1.0.0",
     "storyblok-generate-ts": "^1.16.0"
   },
   "dependencies": {
@@ -23,6 +22,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@storyblok/nuxt": "^6.0.4",
+    "@vercel/analytics": "^1.2.2",
     "@vueuse/core": "^10.7.2",
     "@vueuse/motion": "^2.0.0",
     "dotenv": "^16.4.1",

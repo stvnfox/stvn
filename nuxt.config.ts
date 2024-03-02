@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     ],
     ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
     "@vueuse/motion/nuxt",
-    "nuxt-vercel-analytics",
   ],
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
 });
