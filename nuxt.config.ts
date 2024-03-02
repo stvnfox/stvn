@@ -4,19 +4,20 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default defineNuxtConfig({
-    devtools: { enabled: true },
-    modules: [
-        "@nuxtjs/tailwindcss",
-        [
-            "@nuxtjs/google-fonts",
-            {
-                families: {
-                    Lato: [300, 400, 500, 700],
-                },
-            },
-        ],
-        ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
-        "@vueuse/motion/nuxt",
+  devtools: { enabled: true },
+  modules: [
+    "@nuxtjs/tailwindcss",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Lato: [300, 400, 500, 700],
+        },
+      },
     ],
-    css: ["@fortawesome/fontawesome-svg-core/styles.css"],
+    ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
+    "@vueuse/motion/nuxt",
+    "nuxt-vercel-analytics",
+  ],
+  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
 });

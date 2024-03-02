@@ -15,6 +15,7 @@
     "@nuxtjs/tailwindcss": "^6.11.3",
     "@types/node": "^20.11.16",
     "nuxt": "^3.10.1",
+    "nuxt-vercel-analytics": "^1.0.0",
     "storyblok-generate-ts": "^1.16.0"
   },
   "dependencies": {
