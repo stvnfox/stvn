@@ -23,6 +23,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@storyblok/nuxt": "^6.0.4",
     "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "dotenv": "^16.4.5",
