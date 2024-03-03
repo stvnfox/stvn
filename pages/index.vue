@@ -1,25 +1,25 @@
 <script setup>
-    useHead({
-        htmlAttrs: {
-            lang: "en",
-        },
-    })
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
-    useSeoMeta({
-        title: "Steven Vos - Front-end Developer",
-        ogTitle: "Steven Vos - Front-end Developer",
-        description: "Hi, I'm Steven. And I create websites and applications.",
-        ogDescription:
-            "Hi, I'm Steven. And I create websites and applications.",
-    });
+useHead({
+    htmlAttrs: {
+        lang: "en",
+    },
+})
 
-    const story = await useAsyncStoryblok("home", { version: "draft" });
+useSeoMeta({
+    title: "Steven Vos - Front-end Developer",
+    ogTitle: "Steven Vos - Front-end Developer",
+    description: "Hi, I'm Steven. And I create websites and applications.",
+    ogDescription:
+        "Hi, I'm Steven. And I create websites and applications.",
+});
+
+const story = await useAsyncStoryblok("home", { version: "draft" });
 </script>
 
 <template>
-    <StoryblokComponent
-        v-if="story"
-        :blok="story.content"
-    />
+    <StoryblokComponent v-if="story" :blok="story.content" />
     <ColorModeSwitcher />
+    <SpeedInsights />
 </template>
