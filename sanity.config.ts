@@ -1,7 +1,7 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
-import { PageType } from "./sanity/types/page.types";
+import { schemaTypes } from "./schema";
 
 export default defineConfig({
   name: "stvn",
@@ -10,6 +10,6 @@ export default defineConfig({
   dataset: "production",
   plugins: [structureTool(), visionTool()],
   schema: {
-    types: [PageType],
+    types: schemaTypes,
   },
 });
