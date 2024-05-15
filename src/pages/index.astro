@@ -1,13 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getIntroduction } from '../utils/sanity';
 
-const home = await getIntroduction()
+import Header from '../components/Header.astro';
 ---
 
 <Layout title="Steven Vos">
-	<main>
-		<h1>{home.title}</h1>
-		<pre>{JSON.stringify(home)}</pre>
-	</main>
+	<Header/>
 </Layout>
