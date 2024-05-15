@@ -41,6 +41,9 @@ importers:
       astro:
         specifier: ^4.8.4
         version: 4.8.4(@types/node@20.12.12)(typescript@5.4.5)
+      astro-font:
+        specifier: ^0.0.81
+        version: 0.0.81
       astro-portabletext:
         specifier: ^0.10.0
         version: 0.10.0
@@ -1999,6 +2002,9 @@ packages:
   arrify@2.0.1:
     resolution: {integrity: sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==}
     engines: {node: '>=8'}
+
+  astro-font@0.0.81:
+    resolution: {integrity: sha512-VmK4kqzNpOAt2LASVbw2cbbe9sD6K30E7jOjqzHxHieHMTWInkdOljtzHmNGvKr3P0MeF4Wy+Z7j6CdETFecDA==}
 
   astro-portabletext@0.10.0:
     resolution: {integrity: sha512-07Un6W3R14bRfAf4TlSzAlBkWBXzyK8NPT3Xelm3+f6sVkr61Jlx5k2dXRB6ZZycqBbbLXIbzey2WOcddTl2AA==}
@@ -7324,6 +7330,8 @@ snapshots:
   arrify@1.0.1: {}
 
   arrify@2.0.1: {}
+
+  astro-font@0.0.81: {}
 
   astro-portabletext@0.10.0:
     dependencies:
