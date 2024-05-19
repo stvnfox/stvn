@@ -64,6 +64,6 @@ export const getProjects = async (): Promise<ProjectsResponse> => {
 
 export const getConnect = async (): Promise<ConnectResponse> => {
   const response = await baseFetch;
-  console.log(response)
+
   return response[0].connect
 }
