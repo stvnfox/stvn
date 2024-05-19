@@ -1,0 +1,33 @@
+---
+import { PortableText } from "astro-portabletext";
+import { getWork } from "../utils/sanity";
+
+const data = await getWork();
+---
+
+<div>
+    <!-- TODO: add v-motion="FadeIn(500)" -->
+    <div>
+        <h2
+            class="font-medium text-2xl md:text-lg mb-4"
+        >
+            { data.label }
+        </h2>
+        {data.workItems.map((item) => 
+            <div class="mb-3">
+                <h3
+                    class="font-medium"
+                >
+                    { item.label }
+                </h3>
+                <div
+                    class="text-sm font-light text-neutral-400 dark:text-neutral-700"
+                >
+                    <PortableText
+                        value={item.explanation}
+                    />
+                </div>
+            </div>
+        )}
+    </div>
+</div>

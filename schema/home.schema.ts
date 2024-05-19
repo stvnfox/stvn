@@ -37,5 +37,40 @@ export const home = defineType({
         }),
       ],
     }),
+    defineField({
+      name: "work",
+      title: "Work",
+      type: "object",
+      fields: [
+        defineField({
+          name: "label",
+          title: "Label",
+          type: "string",
+        }),
+        defineField({
+          name: "workItems",
+          title: "Work",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "label",
+                  title: "Label",
+                  type: "string",
+                },
+                {
+                  name: "explanation",
+                  title: "Explanation",
+                  type: "array",
+                  of: [{ type: "block" }]
+                }
+              ]
+            }
+          ]
+        })
+      ]
+    })
   ],
 });
