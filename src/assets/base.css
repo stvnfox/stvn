@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply dark:bg-neutral-900 bg-neutral-50 transition-colors;
+    }
+
+    body {
+        @apply overflow-x-hidden font-sans;
+    }
+}
+
+@layer components {
+    .introduction {
+        p {
+            @apply mb-4 last:mb-0;
+        }
+    }
+
+    .connect,
+    .project {
+        a {
+            @apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:right-0 after:h-px after:bg-neutral-400 dark:after:bg-neutral-700 hover:text-neutral-500 dark:hover:text-neutral-500 hover:after:bg-neutral-500 hover:dark:after:bg-neutral-500 transition-all;
+        }
+    }
+}
+
+@layer utilities {
+    .underline-hover {
+        @apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:transition-all after:delay-100 after:ease-in-out group-hover:after:w-full;
+    }
+}
