@@ -1,0 +1,36 @@
+---
+import { PortableText } from "astro-portabletext";
+import { Icon } from "astro-icon/components"
+import { getConnect } from "../utils/sanity";
+
+const data = await getConnect();
+---
+
+<!-- TODO: Add v-motion="FadeIn(650)" -->
+<section
+    class="my-8 md:my-24"
+>
+        <h2
+            class="font-medium text-2xl md:text-lg mb-4"
+        >
+            { data.label }
+        </h2>
+        <div
+            class="connect font-light mb-6"
+        >
+            <PortableText value={data.introduction}/>
+        </div>
+        <div class="flex gap-4">
+            { data.connectItems.map((item) => 
+                <a
+                    href={item.link}
+                    target="_blank"
+                    aria-label={item.ariaLabel}
+                    rel="noopener noreferrer"
+                    class="flex items-center group text-neutral-400 dark:text-neutral-700 hover:text-neutral-500 hover:dark:text-neutral-900 transition-colors mb-4 md:mb-3 w-fit"
+                >
+                    <Icon name={`mdi:${item.icon}`} class="h-6 w-6" />
+                </a>
+            )}
+        </div>
+</section>

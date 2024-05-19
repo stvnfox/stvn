@@ -29,6 +29,19 @@ type ProjectsResponse = {
   projectItems: ProjectItem[]
 }
 
+type ConnectItem = {
+  label: string;
+  link: string;
+  ariaLabel: string;
+  icon: string;
+}
+
+type ConnectResponse = {
+  label: string;
+  introduction: [];
+  connectItems: ConnectItem[];
+}
+
 const baseFetch = sanityClient.fetch(`*[slug == "home"]`);
 
 export const getIntroduction = async (): Promise<IntroductionResponse> => {
@@ -45,6 +58,12 @@ export const getWork = async (): Promise<WorkResponse> => {
 
 export const getProjects = async (): Promise<ProjectsResponse> => {
   const response = await baseFetch;
-  
+
   return response[0].projects
+}
+
+export const getConnect = async (): Promise<ConnectResponse> => {
+  const response = await baseFetch;
+  console.log(response)
+  return response[0].connect
 }

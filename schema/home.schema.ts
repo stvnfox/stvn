@@ -116,6 +116,60 @@ export const home = defineType({
           ]
         })
       ]
-    })
+    }),
+    defineField({
+      name: "connect",
+      title: "Connect",
+      type: "object",
+      fields: [
+        defineField({
+          name: "label",
+          title: "Label",
+          type: "string",
+        }),
+        defineField({
+          name: "introduction",
+          title: "Introduction",
+          type: "array",
+          of: [{ type: "block" }]
+        }),
+        defineField({
+          name: "connectItems",
+          title: "Items",
+          type: "array",
+          of: [
+            { 
+              type: "object",
+              fields: [
+                defineField({
+                  name: "label",
+                  title: "Label",
+                  type: "string",
+                }),
+                defineField({
+                  name: "link",
+                  title: "Link",
+                  type: "string",
+                }),
+                defineField({
+                  name: "ariaLabel",
+                  title: "Aria label",
+                  type: "string",
+                }),
+                defineField({
+                  name: "icon",
+                  title: "Icon",
+                  type: "string",
+                  options: {
+                    list: ['github', 'linkedin', 'instagram'],
+                    layout: "radio"
+                  }
+                }),
+              ]
+            }
+          ]
+        })
+      ]
+    }),
   ],
 });
