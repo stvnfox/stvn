@@ -71,6 +71,51 @@ export const home = defineType({
           ]
         })
       ]
+    }),
+    defineField({
+      name: "projects",
+      title: "Projects",
+      type: "object",
+      fields: [
+        defineField({
+          name: "label",
+          title: "Label",
+          type: "string",
+        }),
+        defineField({
+          name: "projectItems",
+          title: "Projects",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "label",
+                  title: "Label",
+                  type: "string",
+                },
+                {
+                  name: "explanation",
+                  title: "Explanation",
+                  type: "array",
+                  of: [{ type: "block" }]
+                },
+                {
+                  name: "link",
+                  title: "Link",
+                  type: "string",
+                },
+                {
+                  name: "ariaLabel",
+                  title: "Aria label",
+                  type: "string"
+                }
+              ]
+            }
+          ]
+        })
+      ]
     })
   ],
 });
