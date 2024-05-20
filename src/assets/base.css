@@ -22,7 +22,7 @@
     .connect,
     .project {
         a {
-            @apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:right-0 after:h-px after:bg-neutral-400 dark:after:bg-neutral-700 hover:text-neutral-500 dark:hover:text-neutral-500 hover:after:bg-neutral-500 hover:dark:after:bg-neutral-500 transition-all;
+            @apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:right-0 after:h-px after:bg-red-600 dark:after:bg-neutral-50 hover:text-red-800 dark:hover:text-neutral-50 hover:after:bg-red-800 hover:dark:after:bg-neutral-200 transition-all;
         }
     }
 }

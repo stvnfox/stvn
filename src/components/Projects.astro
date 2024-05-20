@@ -22,7 +22,7 @@ const data = await getProjects();
                     class="group flex items-center gap-2 w-fit mb-2"
                 >
                     <span
-                        class="underline-hover dark:after:bg-neutral-400 after:bg-neutral-700 font-medium"
+                        class="underline-hover dark:after:bg-neutral-50 after:bg-red-600 font-medium"
                     >
                         {item.label}
                     </span>
@@ -42,7 +42,7 @@ const data = await getProjects();
                     </svg>
                 </a>
                 <div
-                    class="project text-sm font-light dark:text-neutral-400 text-neutral-700"
+                    class="project text-sm font-light dark:text-neutral-50 text-red-600"
                 >
                     <PortableText
                         value={item.explanation}

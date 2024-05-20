@@ -10,7 +10,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
     }
 
     useEffect(() => {
-        setMode(getPreferredScheme())
+        setMode('light')
     }, [])
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
 
     return (
         <button 
-            className="absolute top-8 right-[8%] lg:right-1/4"
+            className="absolute top-8 right-[8%] lg:right-1/4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards"
             type="button"
             aria-label="Click here to change the color theme"
             onClick={changeColorTheme}
@@ -34,7 +34,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
-                    className="w-6 h-6 stroke-neutral-50"
+                    className="w-6 h-6 stroke-neutral-50 hover:stroke-neutral-200"
                 >
                     <path 
                         strokeLinecap="round"
@@ -50,7 +50,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
-                    className="w-6 h-6 stroke-neutral-950"
+                    className="w-6 h-6 stroke-red-600 hover:stroke-red-800 transition-colors"
                 >
                     <path
                         strokeLinecap="round"
