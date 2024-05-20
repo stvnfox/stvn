@@ -1,6 +1,7 @@
 ---
 import { AstroFont } from "astro-font";
 import { SEO } from "astro-seo";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import '../assets/base.css';
 ---
 
@@ -48,6 +49,7 @@ import '../assets/base.css';
 				],
 			}}
 		/>
+		<SpeedInsights />
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
