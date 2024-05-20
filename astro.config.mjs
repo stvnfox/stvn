@@ -2,8 +2,9 @@ import { defineConfig } from "astro/config";
 import sanity from "@sanity/astro";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-
 import icon from "astro-icon";
+
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,5 +17,11 @@ export default defineConfig({
   }), react(), tailwind({
     applyBaseStyles: false,
     nesting: true
-  }), icon()]
+  }), icon()],
+  output: "static",
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  })
 });
