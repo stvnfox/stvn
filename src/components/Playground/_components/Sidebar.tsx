@@ -5,13 +5,10 @@ export const Sidebar = () => {
         <nav>
             <ul>
                 <li>
-                    <Link to="/playground">Dashboard</Link>
+                    <Link to="/playground">0. Dashboard</Link>
                 </li>
                 <li>
-                    <Link to="/playground/1">Link 1</Link>
-                </li>
-                <li>
-                    <Link to="/playground/2">Link 2</Link>
+                    <Link to="/playground/faq-list">1. Faq list</Link>
                 </li>
             </ul>
         </nav>
