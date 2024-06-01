@@ -1,0 +1,58 @@
+---
+import { AstroFont } from "astro-font";
+import { SEO } from "astro-seo";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import '../../assets/base.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<AstroFont
+			config={[
+				{
+					src: [],
+					name: "Lato",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap',
+					preload: true,
+					display: "swap",
+					selector: "body",
+					fallback: "sans-serif",
+				},
+			]}
+		/>
+		<SEO
+			title="Steven Vos - Front-end developer"
+			description="Hi, I'm Steven. And I create websites and applications."
+			openGraph={{
+				basic: {
+					title: "Steven Vos - Front-end developer",
+					type: "website",
+					image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+				}
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: "icon", href: "/favicon.ico" }],
+				// extending the default meta tags
+				meta: [
+					{ name: "description", content: "Hi, I'm Steven. And I create websites and applications."},
+					{
+						name: "twitter:image",
+						content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+					},
+					{ name: "twitter:title", content: "Steven Vos - Front-end developer" },
+					{ name: "twitter:description", content: "Hi, I'm Steven. And I create websites and applications." },
+				],
+			}}
+		/>
+		<SpeedInsights />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
