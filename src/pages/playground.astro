@@ -1,13 +1,13 @@
 ---
 import PlaygroundLayout from '../layouts/PlaygroundLayout.astro';
 
-import { Playground } from '../components/Playground/Playground';
+import { PlaygroundComponent } from '../components/Playground/PlaygroundComponent';
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 ---
 
 <PlaygroundLayout>
     <section class="mt-24 mb-12 md:my-24">
-        <Playground client:only/>
+        <PlaygroundComponent client:only/>
         <ThemeSwitcher client:load/>
     </section>
 </PlaygroundLayout>
