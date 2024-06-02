@@ -9,7 +9,7 @@ export const FaqList: FunctionComponent = () => {
     ]
 
     return (
-        <div>
+        <div className="w-full">
             <h1 className='text-2xl font-medium mb-4'>Frequently asked questions</h1>
             {items.map((item, index) => (
                 <FaqItem 
