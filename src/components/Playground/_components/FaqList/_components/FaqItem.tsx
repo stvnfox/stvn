@@ -8,7 +8,12 @@ type FaqItemProps = {
 
 export const FaqItem: FunctionComponent<FaqItemProps> = ({ question, answer }) => {
     return (
-        <details className='mb-2 last:mb-0 group p-5 bg-red-50 rounded-lg hover:cursor-pointer hover:bg-red-100 transition-colors duration-150 ease-in-out'>
+        <motion.details
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ margin: '300px 0px 0px 0px' }}
+            className='mb-2 last:mb-0 group p-5 bg-red-50 rounded-lg hover:cursor-pointer hover:bg-red-100 transition-colors duration-150 ease-in-out'
+        >
             <summary className='flex justify-between items-center list-none'>
                 {question}
                 <svg 
@@ -30,6 +35,6 @@ export const FaqItem: FunctionComponent<FaqItemProps> = ({ question, answer }) =
             >
                 {answer}
             </div>
-        </details>
+        </motion.details>
     )
 }

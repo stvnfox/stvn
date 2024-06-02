@@ -9,8 +9,8 @@ export const FaqList: FunctionComponent = () => {
     ]
 
     return (
-        <div className="w-full">
-            <h1 className='text-2xl font-medium mb-4'>Frequently asked questions</h1>
+        <div className="w-full h-[2000px] flex flex-col justify-center">
+            <h1 className='text-2xl font-medium mb-12'>Frequently asked questions</h1>
             {items.map((item, index) => (
                 <FaqItem 
                     key={index}
