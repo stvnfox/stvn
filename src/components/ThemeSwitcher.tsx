@@ -25,7 +25,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
 
     return (
         <button 
-            className="absolute top-8 right-[8%] lg:right-1/4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards"
+            className="absolute top-8 right-10 md:right-[164px] lg:right-1/4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards"
             type="button"
             aria-label="Click here to change the color theme"
             onClick={changeColorTheme}

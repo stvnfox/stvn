@@ -3,9 +3,10 @@ import Layout from '../layouts/Layout.astro';
 
 import Connect from '../components/Connect.astro';
 import Header from '../components/Header.astro';
+import PlaygroundLink from '../components/PlaygroundLink.astro';
 import Projects from '../components/Projects.astro';
-import Work from '../components/Work.astro';
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
+import Work from '../components/Work.astro';
 ---
 
 <Layout>
@@ -15,5 +16,6 @@ import { ThemeSwitcher } from '../components/ThemeSwitcher';
 		<Projects/>
 	</section>
 	<Connect/>
+	<PlaygroundLink/>
 	<ThemeSwitcher client:load/>
 </Layout>
