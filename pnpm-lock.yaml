@@ -63,8 +63,8 @@ importers:
         specifier: ^0.8.4
         version: 0.8.4(prettier@3.3.2)(typescript@5.5.3)
       framer-motion:
-        specifier: ^11.2.14
-        version: 11.2.14(@emotion/is-prop-valid@1.2.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^11.3.0
+        version: 11.3.0(@emotion/is-prop-valid@1.2.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -121,8 +121,8 @@ packages:
   '@astrojs/internal-helpers@0.4.1':
     resolution: {integrity: sha512-bMf9jFihO8YP940uD70SI/RDzIhUHJAolWVcO1v5PUivxGKvfLZTLTVVxEYzGYyPsA3ivdLNqMnL5VgmQySa+g==}
 
-  '@astrojs/language-server@2.11.0':
-    resolution: {integrity: sha512-GmhF4A2rDCFzk/U0k1ySa8d/p6binaQZQJwSmHsY4Q8aHi5urjkG9csm0ZevKMPJmIRewE4jgh3pwzMGa4e0eQ==}
+  '@astrojs/language-server@2.11.1':
+    resolution: {integrity: sha512-WSIBBUK9lSeVD4KhPiZk2u3wsXdj7WEYvYPPs8ZsgbSVIOzUJWAKVcITHiXmcXlzZB5ubK44YUN/Hq+f2GeMyQ==}
     hasBin: true
     peerDependencies:
       prettier: ^3.0.0
@@ -1683,42 +1683,42 @@ packages:
       svelte:
         optional: true
 
-  '@sentry-internal/browser-utils@8.16.0':
-    resolution: {integrity: sha512-40lzNy5F6dUFCN85AGThBxHPQLSwoNhZM2hWqhAR5rZ3Yed0uBaKlm4aNJCeeUB9l4kd0sH0In+i9Nqu6TGKrw==}
+  '@sentry-internal/browser-utils@8.17.0':
+    resolution: {integrity: sha512-BEYBIDX1y8paKsDk8PmjYfAYFNS+KSeEhOwJTr/RWjvx/Fyb5ZF2q4u7qMjeNFLcxKnMkQTGYE9CYf/7XWs4bA==}
     engines: {node: '>=14.18'}
 
-  '@sentry-internal/feedback@8.16.0':
-    resolution: {integrity: sha512-BmRazZKl6iiVSg6eybUNOI1ve4eZqYpJYjkX48Jedn+7iZg7z12MNYl6IWPFBcN+sg+clf4wiKDr/SYS0yNemQ==}
+  '@sentry-internal/feedback@8.17.0':
+    resolution: {integrity: sha512-lFypwCqqcwgh++8sPZw9hAEKphXSgPIdSqoXakgwSKxGx2pCIBbzeyOWzUeBpGfBkTw813HiuRwNY+e0dF6b4Q==}
     engines: {node: '>=14.18'}
 
-  '@sentry-internal/replay-canvas@8.16.0':
-    resolution: {integrity: sha512-Bjh6pCDLZIPAPU2dNvJfI7BQV16rsRtYcylJgkGamjf8IcaBu7r/Whsvt1q34xO29xc0ISlp+0xG+YAdN1690Q==}
+  '@sentry-internal/replay-canvas@8.17.0':
+    resolution: {integrity: sha512-2FAbd/65zjPzlUQK/cKBzNPIClBKSPrHzfuB1ZM102JwSpvS5sljzhLvxua17uwU9V1Z9pbOT1pu5KtkUyc7lQ==}
     engines: {node: '>=14.18'}
 
-  '@sentry-internal/replay@8.16.0':
-    resolution: {integrity: sha512-JT/wmYU2JPtl8Ldl9oml/25Yz6C5wG+SpylDeUx4mPh728E/iI9vesIc2652J/0xots/DZXe4K6K5nYjdFtEcQ==}
+  '@sentry-internal/replay@8.17.0':
+    resolution: {integrity: sha512-SBNXBbXEd4WdCIIa/9mkcrwUjxJxSQtYakJ00Xvv/gwqR1rmRFOVqVjLXisryDXCucdD4Rp5MqRT9H+BcSNVtg==}
     engines: {node: '>=14.18'}
 
-  '@sentry/browser@8.16.0':
-    resolution: {integrity: sha512-8Fxmk2aFWRixi2IKixiJR10Du34yb13HYr2iRw1haPKb5ZKa6CFA+XAnSzwpPZxO0RSHuPQR06YNkXaQ8fRAQQ==}
+  '@sentry/browser@8.17.0':
+    resolution: {integrity: sha512-dPMvxyS+ogu7/3+AI83U2IKaLO7hZUt3J35mtgOQhAETcyNaLZtJP1VNUAcW/VhJa3TMCfmG5A1+dkBp8A6cdA==}
     engines: {node: '>=14.18'}
 
-  '@sentry/core@8.16.0':
-    resolution: {integrity: sha512-l9mQgm5OqnykvZMh6PmJ/9ygW4qLyEFop+pQH/uM5zQCZQvEa7rvAd9QXKHdbVKq1CxJa/nJiByc8wPWxsftGQ==}
+  '@sentry/core@8.17.0':
+    resolution: {integrity: sha512-s62O0Re6WcvaVbH1IEeAWmj/ca8UhaRoFaDnc5TR68reOycBrgnqCNq3qHxBsELOA6NJowoK+T29DDGs9QVXhQ==}
     engines: {node: '>=14.18'}
 
-  '@sentry/react@8.16.0':
-    resolution: {integrity: sha512-5q2CMz+nJxTVXrNC82MpIFYvg4D2Fcdwp3LccESDln3IazetvTHJpEefjfeIGHus4spCfXilgGMsnnbyTZlbWg==}
+  '@sentry/react@8.17.0':
+    resolution: {integrity: sha512-KhRECfyhIZZQGuaIB4V7k7wmeyQcxvsKtZUrkj9bTjP3uTf9p+WHKGlyTnX1jdidEgGJAnmBYnKMqR5mUZDCyQ==}
     engines: {node: '>=14.18'}
     peerDependencies:
       react: ^16.14.0 || 17.x || 18.x || 19.x
 
-  '@sentry/types@8.16.0':
-    resolution: {integrity: sha512-cIRsn7gWGVaWHgCniBWA0N8PNwzDYibhjyjPRTMxUjuZCT37i7zxByKKmd9u4TpRIJ64MyirNyM0O6T0A26fpg==}
+  '@sentry/types@8.17.0':
+    resolution: {integrity: sha512-v0nI0+ajiGTijhF1W/ryn2+zFVFr6VPn6lao3W4qKj9MlltIHa4/uuGzTaiCFwoPw7g5bZ1Q09SStpDXVMkz2A==}
     engines: {node: '>=14.18'}
 
-  '@sentry/utils@8.16.0':
-    resolution: {integrity: sha512-tltCf2DVzz5TiYjxu/Rxbc9Qmm04893MFshV97jOTBcQeO2AAZBEl5rAoTCv1P08y7Yg+KiVwCx9Zj2x5U80/g==}
+  '@sentry/utils@8.17.0':
+    resolution: {integrity: sha512-HHtAPLOlvzhwgfYzxtuPnLUoGRMtMrFvopkii74zmx/1ZD4VN4PYPB2E5KFf3c18pTovw+kxF0ux6VrGiyAHsw==}
     engines: {node: '>=14.18'}
 
   '@shikijs/core@1.10.3':
@@ -2668,8 +2668,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.4.823:
-    resolution: {integrity: sha512-4h+oPeAiGQOHFyUJOqpoEcPj/xxlicxBzOErVeYVMMmAiXUXsGpsFd0QXBMaUUbnD8hhSfLf9uw+MlsoIA7j5w==}
+  electron-to-chromium@1.4.825:
+    resolution: {integrity: sha512-OCcF+LwdgFGcsYPYC5keEEFC2XT0gBhrYbeGzHCx7i9qRFbzO/AqTmc/C/1xNhJj+JA7rzlN7mpBuStshh96Cg==}
 
   emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -2883,8 +2883,8 @@ packages:
       react-dom:
         optional: true
 
-  framer-motion@11.2.14:
-    resolution: {integrity: sha512-0Nwg++Jymj4Yn7LFKH/nKuGrgVZTEIgIbLjl+LBBFBEzNd4rX+n3z/doqjEbvjk1xcmsim9h7du2+LTYdQTULw==}
+  framer-motion@11.3.0:
+    resolution: {integrity: sha512-hjYjMUQaWuqilwRr5kC0CunHZFVMtKWHy/IdL/LPRBD0C491DKTvYwQRJ5qRXEAOT+Rth7Vi4XBe4TA4bFOn3A==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -3338,9 +3338,8 @@ packages:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
 
-  jackspeak@3.4.2:
-    resolution: {integrity: sha512-qH3nOSj8q/8+Eg8LUPOq3C+6HWkpUioIjDsq1+D4zY91oZvpPttw8GwtF1nReRYKXl+1AORyFqtm2f5Q1SB6/Q==}
-    engines: {node: 14 >=14.21 || 16 >=16.20 || >=18}
+  jackspeak@3.4.3:
+    resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
 
   jiti@1.21.6:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
@@ -4291,8 +4290,8 @@ packages:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
 
-  react-rx@3.1.1:
-    resolution: {integrity: sha512-vfNUuBQc7q6+RkeOBWQHT2/GyFP9uxULfmPlQWAHaDJw1vZykfsDpzVu2gFMPUd5PVEebT9XPRIOYXa7MOoUdQ==}
+  react-rx@3.1.2:
+    resolution: {integrity: sha512-X1qhU02OKDmSdUA0A4S1QOBiQ1KahNL+irYq8qv4CFSnZ51RRc6ZGJxtxjBmYNTTrUTABf9GNU3Rxb3M3dSJvQ==}
     peerDependencies:
       react: ^18.3 || >=19.0.0-rc
       rxjs: ^7
@@ -5003,6 +5002,11 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
+  use-effect-event@1.0.2:
+    resolution: {integrity: sha512-9c8AAmtQja4LwJXI0EQPhQCip6dmrcSe0FMcTUZBeGh/XTCOLgw3Qbt0JdUT8Rcrm/ZH+Web7MIcMdqgQKdXJg==}
+    peerDependencies:
+      react: ^18.3 || ^19.0.0-0
+
   use-hot-module-reload@2.0.0:
     resolution: {integrity: sha512-RbL/OY1HjHNf5BYSFV3yDtQhIGKjCx9ntEjnUBYsOGc9fTo94nyFTcjtD42/twJkPgMljWpszUIpTGD3LuwHSg==}
     peerDependencies:
@@ -5386,7 +5390,7 @@ snapshots:
 
   '@astrojs/check@0.5.10(prettier@3.3.2)(typescript@5.5.3)':
     dependencies:
-      '@astrojs/language-server': 2.11.0(prettier@3.3.2)(typescript@5.5.3)
+      '@astrojs/language-server': 2.11.1(prettier@3.3.2)(typescript@5.5.3)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -5398,7 +5402,7 @@ snapshots:
 
   '@astrojs/check@0.7.0(prettier@3.3.2)(typescript@5.5.3)':
     dependencies:
-      '@astrojs/language-server': 2.11.0(prettier@3.3.2)(typescript@5.5.3)
+      '@astrojs/language-server': 2.11.1(prettier@3.3.2)(typescript@5.5.3)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -5412,7 +5416,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.1': {}
 
-  '@astrojs/language-server@2.11.0(prettier@3.3.2)(typescript@5.5.3)':
+  '@astrojs/language-server@2.11.1(prettier@3.3.2)(typescript@5.5.3)':
     dependencies:
       '@astrojs/compiler': 2.8.2
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -7290,61 +7294,61 @@ snapshots:
     optionalDependencies:
       '@sanity/client': 6.20.2(debug@4.3.5)
 
-  '@sentry-internal/browser-utils@8.16.0':
+  '@sentry-internal/browser-utils@8.17.0':
     dependencies:
-      '@sentry/core': 8.16.0
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry/core': 8.17.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
 
-  '@sentry-internal/feedback@8.16.0':
+  '@sentry-internal/feedback@8.17.0':
     dependencies:
-      '@sentry/core': 8.16.0
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry/core': 8.17.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
 
-  '@sentry-internal/replay-canvas@8.16.0':
+  '@sentry-internal/replay-canvas@8.17.0':
     dependencies:
-      '@sentry-internal/replay': 8.16.0
-      '@sentry/core': 8.16.0
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry-internal/replay': 8.17.0
+      '@sentry/core': 8.17.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
 
-  '@sentry-internal/replay@8.16.0':
+  '@sentry-internal/replay@8.17.0':
     dependencies:
-      '@sentry-internal/browser-utils': 8.16.0
-      '@sentry/core': 8.16.0
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry-internal/browser-utils': 8.17.0
+      '@sentry/core': 8.17.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
 
-  '@sentry/browser@8.16.0':
+  '@sentry/browser@8.17.0':
     dependencies:
-      '@sentry-internal/browser-utils': 8.16.0
-      '@sentry-internal/feedback': 8.16.0
-      '@sentry-internal/replay': 8.16.0
-      '@sentry-internal/replay-canvas': 8.16.0
-      '@sentry/core': 8.16.0
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry-internal/browser-utils': 8.17.0
+      '@sentry-internal/feedback': 8.17.0
+      '@sentry-internal/replay': 8.17.0
+      '@sentry-internal/replay-canvas': 8.17.0
+      '@sentry/core': 8.17.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
 
-  '@sentry/core@8.16.0':
+  '@sentry/core@8.17.0':
     dependencies:
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
 
-  '@sentry/react@8.16.0(react@18.3.1)':
+  '@sentry/react@8.17.0(react@18.3.1)':
     dependencies:
-      '@sentry/browser': 8.16.0
-      '@sentry/core': 8.16.0
-      '@sentry/types': 8.16.0
-      '@sentry/utils': 8.16.0
+      '@sentry/browser': 8.17.0
+      '@sentry/core': 8.17.0
+      '@sentry/types': 8.17.0
+      '@sentry/utils': 8.17.0
       hoist-non-react-statics: 3.3.2
       react: 18.3.1
 
-  '@sentry/types@8.16.0': {}
+  '@sentry/types@8.17.0': {}
 
-  '@sentry/utils@8.16.0':
+  '@sentry/utils@8.17.0':
     dependencies:
-      '@sentry/types': 8.16.0
+      '@sentry/types': 8.17.0
 
   '@shikijs/core@1.10.3':
     dependencies:
@@ -7931,7 +7935,7 @@ snapshots:
   browserslist@4.23.2:
     dependencies:
       caniuse-lite: 1.0.30001641
-      electron-to-chromium: 1.4.823
+      electron-to-chromium: 1.4.825
       node-releases: 2.0.14
       update-browserslist-db: 1.1.0(browserslist@4.23.2)
 
@@ -8420,7 +8424,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.4.823: {}
+  electron-to-chromium@1.4.825: {}
 
   emmet@2.4.7:
     dependencies:
@@ -8678,7 +8682,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  framer-motion@11.2.14(@emotion/is-prop-valid@1.2.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.3.0(@emotion/is-prop-valid@1.2.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       tslib: 2.6.3
     optionalDependencies:
@@ -8782,7 +8786,7 @@ snapshots:
   glob@10.4.5:
     dependencies:
       foreground-child: 3.2.1
-      jackspeak: 3.4.2
+      jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
       package-json-from-dist: 1.0.0
@@ -9155,7 +9159,7 @@ snapshots:
 
   isobject@3.0.1: {}
 
-  jackspeak@3.4.2:
+  jackspeak@3.4.3:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
@@ -10252,11 +10256,12 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react-rx@3.1.1(react@18.3.1)(rxjs@7.8.1):
+  react-rx@3.1.2(react@18.3.1)(rxjs@7.8.1):
     dependencies:
       observable-callback: 1.0.3(rxjs@7.8.1)
       react: 18.3.1
       rxjs: 7.8.1
+      use-effect-event: 1.0.2(react@18.3.1)
 
   react-style-proptype@3.2.2:
     dependencies:
@@ -10571,7 +10576,7 @@ snapshots:
       '@sanity/ui': 2.6.3(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@sanity/util': 3.49.0(debug@4.3.5)
       '@sanity/uuid': 3.0.2
-      '@sentry/react': 8.16.0(react@18.3.1)
+      '@sentry/react': 8.17.0(react@18.3.1)
       '@tanstack/react-table': 8.19.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/react-virtual': 3.0.0-beta.54(react@18.3.1)
       '@types/react-copy-to-clipboard': 5.0.7
@@ -10636,7 +10641,7 @@ snapshots:
       react-i18next: 13.5.0(i18next@23.11.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-is: 18.3.1
       react-refractor: 2.2.0(react@18.3.1)
-      react-rx: 3.1.1(react@18.3.1)(rxjs@7.8.1)
+      react-rx: 3.1.2(react@18.3.1)(rxjs@7.8.1)
       read-pkg-up: 7.0.1
       refractor: 3.6.0
       resolve-from: 5.0.0
@@ -11243,6 +11248,10 @@ snapshots:
       '@types/react': 18.3.3
 
   use-device-pixel-ratio@1.1.2(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  use-effect-event@1.0.2(react@18.3.1):
     dependencies:
       react: 18.3.1
 
