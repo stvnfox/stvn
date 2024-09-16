@@ -21,7 +21,7 @@
     "@sanity/client": "^6.21.3",
     "@sanity/types": "^3.57.3",
     "@sanity/vision": "^3.57.3",
-    "@types/react": "^18.3.5",
+    "@types/react": "^18.3.6",
     "@types/react-dom": "^18.3.0",
     "@vercel/speed-insights": "^1.0.12",
     "astro": "^4.15.6",
