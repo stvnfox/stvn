@@ -1,25 +1,24 @@
 import { useEffect, useState, type FunctionComponent } from "react";
 
-export const ThemeSwitcher: FunctionComponent = () => {
-    const [mode, setMode] = useState<null | string>(null)
+enum Theme {
+    DARK = 'dark',
+    LIGHT = 'light'
+}
 
-    const getPreferredScheme = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ? 'dark' : 'light';
+export const ThemeSwitcher: FunctionComponent = () => {
+    const [mode, setMode] = useState<string>(Theme.DARK)
 
     const changeColorTheme = () => {
-        mode === 'dark' ? setMode('light') : setMode('dark')
+        mode === Theme.DARK ? setMode(Theme.LIGHT) : setMode(Theme.DARK)
     }
 
     useEffect(() => {
-        setMode('light')
-    }, [])
-
-    useEffect(() => {
-        if(mode === 'dark') {
-            document.body.classList.add('dark')
-            document.documentElement.classList.add('dark')
+        if(mode === Theme.DARK) {
+            document.body.classList.add(Theme.DARK)
+            document.documentElement.classList.add(Theme.DARK)
         } else {
-            document.body.classList.remove('dark')
-            document.documentElement.classList.remove('dark')
+            document.body.classList.remove(Theme.DARK)
+            document.documentElement.classList.remove(Theme.DARK)
         }
     }, [mode])
 
@@ -30,7 +29,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
             aria-label="Click here to change the color theme"
             onClick={changeColorTheme}
         >
-            { mode === 'dark' && (
+            { mode === Theme.DARK && (
                 <svg 
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -46,7 +45,7 @@ export const ThemeSwitcher: FunctionComponent = () => {
                 </svg>
             )}
 
-            { mode === 'light' && (
+            { mode === Theme.LIGHT && (
                 <svg 
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
