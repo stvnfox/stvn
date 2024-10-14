@@ -4,6 +4,12 @@ export const home = defineType({
   name: "home",
   title: "Homepage",
   type: "document",
+  groups: [
+    { name: "introduction", title: "Introduction" },
+    { name: "work", title: "Work" },
+    { name: "projects", title: "Projects" },
+    { name: "connect", title: "Connect" },
+  ],
   fields: [
     defineField({
       name: "slug",
@@ -23,6 +29,7 @@ export const home = defineType({
       name: "introduction",
       title: "Introduction",
       type: "object",
+      group: "introduction",
       fields: [
         defineField({
           name: "title",
@@ -41,6 +48,7 @@ export const home = defineType({
       name: "work",
       title: "Work",
       type: "object",
+      group: "work",
       fields: [
         defineField({
           name: "label",
@@ -64,18 +72,19 @@ export const home = defineType({
                   name: "explanation",
                   title: "Explanation",
                   type: "array",
-                  of: [{ type: "block" }]
-                }
-              ]
-            }
-          ]
-        })
-      ]
+                  of: [{ type: "block" }],
+                },
+              ],
+            },
+          ],
+        }),
+      ],
     }),
     defineField({
       name: "projects",
       title: "Projects",
       type: "object",
+      group: "projects",
       fields: [
         defineField({
           name: "label",
@@ -99,7 +108,7 @@ export const home = defineType({
                   name: "explanation",
                   title: "Explanation",
                   type: "array",
-                  of: [{ type: "block" }]
+                  of: [{ type: "block" }],
                 },
                 {
                   name: "link",
@@ -109,18 +118,19 @@ export const home = defineType({
                 {
                   name: "ariaLabel",
                   title: "Aria label",
-                  type: "string"
-                }
-              ]
-            }
-          ]
-        })
-      ]
+                  type: "string",
+                },
+              ],
+            },
+          ],
+        }),
+      ],
     }),
     defineField({
       name: "connect",
       title: "Connect",
       type: "object",
+      group: "connect",
       fields: [
         defineField({
           name: "label",
@@ -131,14 +141,14 @@ export const home = defineType({
           name: "introduction",
           title: "Introduction",
           type: "array",
-          of: [{ type: "block" }]
+          of: [{ type: "block" }],
         }),
         defineField({
           name: "connectItems",
           title: "Items",
           type: "array",
           of: [
-            { 
+            {
               type: "object",
               fields: [
                 defineField({
@@ -161,15 +171,15 @@ export const home = defineType({
                   title: "Icon",
                   type: "string",
                   options: {
-                    list: ['github', 'linkedin', 'instagram'],
-                    layout: "radio"
-                  }
+                    list: ["github", "linkedin", "instagram"],
+                    layout: "radio",
+                  },
                 }),
-              ]
-            }
-          ]
-        })
-      ]
+              ],
+            },
+          ],
+        }),
+      ],
     }),
   ],
 });
