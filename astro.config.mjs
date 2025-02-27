@@ -13,7 +13,7 @@ export default defineConfig({
       projectId: "4xy3zla7",
       dataset: "production",
       useCdn: true,
-      apiVersion: "2024-04-13",
+      apiVersion: "2025-02-27",
       studioBasePath: "/admin",
     }),
     react(),
