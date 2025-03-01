@@ -18,13 +18,13 @@
     "@iconify/tools": "^4.1.1",
     "@portabletext/types": "^2.0.13",
     "@sanity/astro": "^3.2.5",
-    "@sanity/client": "^6.28.1",
+    "@sanity/client": "^6.28.2",
     "@sanity/types": "^3.77.2",
     "@sanity/vision": "^3.77.2",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.4.0",
+    "astro": "^5.4.1",
     "astro-font": "^0.0.81",
     "astro-icon": "^1.1.5",
     "astro-portabletext": "^0.10.1",
@@ -36,7 +36,7 @@
     "styled-components": "^6.1.15",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   },
   "overrides": {
     "astro-icon": {
