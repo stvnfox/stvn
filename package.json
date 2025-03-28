@@ -18,7 +18,7 @@
     "@iconify/tools": "^4.1.2",
     "@portabletext/types": "^2.0.13",
     "@sanity/astro": "^3.2.6",
-    "@sanity/client": "^6.28.3",
+    "@sanity/client": "^6.28.4",
     "@sanity/types": "^3.81.0",
     "@sanity/vision": "^3.81.0",
     "@types/react": "^18.3.20",
