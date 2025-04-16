@@ -1,16 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
+import { getPosts, getPostContent } from '../../utils/sanity';
 
-export function getStaticPaths() {
-  return [
-    { params: { blog: "1" }},
-    { params: { blog: "2" }},
-    { params: { blog: "3" }},
-  ];
+export async function getStaticPaths() {
+    const posts = await getPosts();
+    return posts.map((post) => ({
+        params: { blog: post.slug.current },
+    }));
 }
 
 const { blog } = Astro.params;
+const post = await getPostContent(blog);
+
+console.log(post);
 ---
 
 <Layout>

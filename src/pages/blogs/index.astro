@@ -1,12 +1,22 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
+import { getPosts } from '../../utils/sanity';
+
+const posts = await getPosts();
 ---
 
 <Layout>
 	<header class="mt-24 mb-12 md:my-24">
 		<a href="/" class="block font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards">Back to home</a>
 		<h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards">Blogs</h1>
+		<ul class="flex flex-col gap-4">
+			{posts.map((post) => (
+				<li class="opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards">
+					<a href={`/blogs/${post.slug.current}`} class="font-medium text-lg mb-4 opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards">{post.title}</a>
+				</li>
+			))}
+		</ul>
 	</header>
 	<ThemeSwitcher client:load/>
 </Layout>
