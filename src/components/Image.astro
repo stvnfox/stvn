@@ -13,7 +13,7 @@ const {
 const src = urlFor(_ref).toString();
 ---
 
-<figure class="my-6">
-  <img src={src} alt={alt ?? ""} {...attrs} class="aspect-square w-full object-cover" />
+<figure class="my-6 relative left-1/2 md:w-[133%] max-w-none -translate-x-1/2">
+  <img src={src} alt={alt ?? ""} {...attrs} class="aspect-video w-full object-cover" />
   {caption && <figcaption class="text-sm italic">{caption}</figcaption>}
 </figure>

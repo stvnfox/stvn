@@ -22,7 +22,6 @@ type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 const { blog } = Astro.params as Params;
 
 const post = await getPostContent(blog);
-console.log(post);
 ---
 
 <Layout>
@@ -36,10 +35,10 @@ console.log(post);
         <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">{post.title}</h1>
         <p class="font-light opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">{post.excerpt}</p>
     </header>
-    <main class="mb-12 md:mb-24">
+    <main class="mb-12 md:mb-24 animate-[fade_0.5s_0.4s_ease-in-out] opacity-[0.01] fill-mode-forwards">
         {post.mainImage ? (
             <img
-                class="aspect-square opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards my-6 w-full object-cover"
+                class="aspect-video relative left-1/2 md:w-[133%] max-w-none -translate-x-1/2 my-6 w-full object-cover"
                 src={urlFor(post.mainImage).url()}
                 alt=""
             />
