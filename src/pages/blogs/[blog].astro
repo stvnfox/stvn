@@ -1,10 +1,15 @@
 ---
-import { getPosts, getPostContent } from '../../utils/sanity';
-
-import Layout from '../../layouts/Layout.astro';
-import { ThemeSwitcher } from '../../components/ThemeSwitcher';
+import type { InferGetStaticParamsType } from "astro";
 import { Icon } from "astro-icon/components"
+import { PortableText } from "astro-portabletext";
 
+import { getPosts, getPostContent } from '../../utils/sanity';
+import { urlFor } from "../../utils/image";
+
+import { ThemeSwitcher } from '../../components/ThemeSwitcher';
+import Layout from '../../layouts/Layout.astro';
+import Image from '../../components/Image.astro';
+import Code from '../../components/Code.astro';
 export async function getStaticPaths() {
     const posts = await getPosts();
     return posts.map((post) => ({
@@ -12,37 +17,44 @@ export async function getStaticPaths() {
     }));
 }
 
-const { blog } = Astro.params;
-const post = await getPostContent(blog);
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 
+const { blog } = Astro.params as Params;
+
+const post = await getPostContent(blog);
 console.log(post);
 ---
 
 <Layout>
-    <header class="mt-24 mb-12 md:my-24">
+    <header class="mt-24">
         <a href="/blogs" class="flex items-center gap-2 group font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards lowercase underline-hover dark:after:bg-neutral-50 after:bg-red-600">
             <Icon name="mdi:arrow-left" class="w-4 h-4" />
             <span class="underline-hover dark:after:bg-neutral-50 after:bg-red-600">
                 Back to blogs
             </span>
         </a>
-        <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">Blog {blog}</h1>
-        <div class="font-light introduction opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards lowercase">
-            Qui sit eu officia et exercitation dolore. Exercitation quis et laborum ipsum cillum ut veniam aute excepteur nostrud quis. Ad officia ipsum id eiusmod laboris qui proident anim est id duis nulla id. Aliqua ullamco et qui quis eu dolor pariatur do tempor dolore id minim eu deserunt id. Fugiat quis aliqua eiusmod deserunt ipsum amet esse elit ea. Eu duis culpa qui pariatur duis minim deserunt incididunt nisi est ut id. Irure eiusmod eiusmod et dolore fugiat cillum enim.
-            <br/>
-            <br/>
-            Nulla voluptate adipisicing irure esse anim ullamco eiusmod culpa magna aliqua. Commodo labore sint quis adipisicing proident aliqua. Excepteur eiusmod commodo nisi anim voluptate proident labore magna qui commodo. Adipisicing mollit cupidatat amet tempor ex exercitation in. Laboris ad consequat ut. Reprehenderit ex nisi irure tempor duis et ullamco occaecat amet exercitation. Tempor mollit eiusmod consectetur amet do non.
-            <br/>
-            <br/>
-
-            Id sit reprehenderit aliqua consequat id consectetur fugiat consequat culpa ad excepteur irure magna. Amet id ad exercitation id anim ex consequat minim aliqua enim. Culpa incididunt esse ad. Enim minim cupidatat eiusmod consectetur excepteur proident ullamco qui fugiat. In dolore sunt sint ea irure ut pariatur officia consequat. Labore nisi quis sunt do reprehenderit aute aliqua veniam. Minim in culpa aliquip duis.
-            <br/>
-            <br/>
-            Sit sunt eiusmod tempor consequat do minim eu dolor dolore fugiat aliqua. Ipsum labore do laboris ad voluptate ipsum fugiat exercitation consectetur enim dolore consectetur. Sunt laborum anim amet laborum id mollit Lorem ea ut proident occaecat sit ullamco. Irure do tempor esse nisi cillum ut proident excepteur.
-            <br/>
-            <br/>
-            Et officia et eu labore sint voluptate ex magna anim aute commodo proident laboris. Voluptate duis sunt proident adipisicing eu magna dolore et sunt esse. Ad nostrud eiusmod ea ullamco quis in do minim ex irure. Sit sunt consectetur sunt qui eu commodo exercitation minim exercitation esse laboris aliquip. Lorem eiusmod nulla ad non reprehenderit. Incididunt amet cillum velit adipisicing deserunt pariatur ad dolore reprehenderit elit mollit eu. Anim aliqua nulla consectetur ad laborum tempor veniam nostrud.
-        </div>
+        <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">{post.title}</h1>
+        <p class="font-light opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">{post.excerpt}</p>
     </header>
+    <main class="mb-12 md:mb-24">
+        {post.mainImage ? (
+            <img
+                class="aspect-square opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards my-6 w-full object-cover"
+                src={urlFor(post.mainImage).url()}
+                alt=""
+            />
+        ) : null}
+        <div class="font-light introduction opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">
+            <PortableText
+                value={post.body}
+                components={{
+                    type: Image,
+                    mark: {
+                        code: Code,
+                    }
+                }}
+            />
+        </div>
+    </main>
     <ThemeSwitcher client:load/>
 </Layout>

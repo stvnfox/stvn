@@ -51,9 +51,11 @@ type Blog = {
     current: string;
   };
   mainImage: {
+    _type: string,
     asset: {
-      ref: string;
-    };
+      _type: string,
+      _ref: string;
+    }
   };
   body: [];
 }

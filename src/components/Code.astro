@@ -1,0 +1,13 @@
+---
+const { 
+    node: { 
+        children
+    },
+} = Astro.props;
+---
+
+<div class="dark:bg-red-500 bg-neutral-100 p-4 rounded-md">
+    <code class="text-red-600 dark:text-neutral-50 font-mono text-sm">
+        {children[0].text} 
+    </code>     
+</div>

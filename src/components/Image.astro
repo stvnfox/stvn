@@ -1,0 +1,19 @@
+---
+import { urlFor } from "../utils/image";
+
+const {
+  node: {
+    asset: { _ref },
+    caption,
+    alt,
+  },
+  ...attrs
+} = Astro.props;
+
+const src = urlFor(_ref).toString();
+---
+
+<figure class="my-6">
+  <img src={src} alt={alt ?? ""} {...attrs} class="aspect-square w-full object-cover" />
+  {caption && <figcaption class="text-sm italic">{caption}</figcaption>}
+</figure>
