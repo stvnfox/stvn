@@ -1,0 +1,18 @@
+---
+import { PortableText } from "astro-portabletext";
+
+const { post } = Astro.props;
+---
+
+<div>
+    <li class="opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards lowercase">
+        <a href={`/blogs/${post.slug.current}`} class="group font-medium text-lg mb-4 opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards relative before:absolute before:-left-8 before:top-3.5 before:w-4 before:h-px before:bg-red-600 before:dark:bg-neutral-50 before:rounded-full transition-colors">
+            <h2 class="font-medium text-lg mb-1 w-fit underline-hover dark:after:bg-neutral-50 after:bg-red-600 ">
+                {post.title}
+            </h2>
+            <p class="text-sm font-light">
+                {post.excerpt}
+            </p>
+        </a>
+    </li>
+</div>

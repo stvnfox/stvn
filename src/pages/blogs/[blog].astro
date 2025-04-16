@@ -1,7 +1,9 @@
 ---
+import { getPosts, getPostContent } from '../../utils/sanity';
+
 import Layout from '../../layouts/Layout.astro';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
-import { getPosts, getPostContent } from '../../utils/sanity';
+import { Icon } from "astro-icon/components"
 
 export async function getStaticPaths() {
     const posts = await getPosts();
@@ -18,9 +20,14 @@ console.log(post);
 
 <Layout>
     <header class="mt-24 mb-12 md:my-24">
-        <a href="/blogs" class="block font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards">Back to blogs</a>
-        <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards">Blog {blog}</h1>
-        <div class="font-light introduction opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards">
+        <a href="/blogs" class="flex items-center gap-2 group font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards lowercase underline-hover dark:after:bg-neutral-50 after:bg-red-600">
+            <Icon name="mdi:arrow-left" class="w-4 h-4" />
+            <span class="underline-hover dark:after:bg-neutral-50 after:bg-red-600">
+                Back to blogs
+            </span>
+        </a>
+        <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">Blog {blog}</h1>
+        <div class="font-light introduction opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards lowercase">
             Qui sit eu officia et exercitation dolore. Exercitation quis et laborum ipsum cillum ut veniam aute excepteur nostrud quis. Ad officia ipsum id eiusmod laboris qui proident anim est id duis nulla id. Aliqua ullamco et qui quis eu dolor pariatur do tempor dolore id minim eu deserunt id. Fugiat quis aliqua eiusmod deserunt ipsum amet esse elit ea. Eu duis culpa qui pariatur duis minim deserunt incididunt nisi est ut id. Irure eiusmod eiusmod et dolore fugiat cillum enim.
             <br/>
             <br/>

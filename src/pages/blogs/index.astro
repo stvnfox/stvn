@@ -1,20 +1,27 @@
 ---
+import { getPosts } from '../../utils/sanity';
+import { Icon } from "astro-icon/components"
 import Layout from '../../layouts/Layout.astro';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
-import { getPosts } from '../../utils/sanity';
+import Blog from '../../components/Blog.astro';
 
 const posts = await getPosts();
 ---
 
 <Layout>
 	<header class="mt-24 mb-12 md:my-24">
-		<a href="/" class="block font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards">Back to home</a>
-		<h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards">Blogs</h1>
+		<div class="group w-fit">
+			<a href="/" class="flex gap-2 items-center font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards lowercase group">
+				<Icon name="mdi:arrow-left" class="w-4 h-4" />
+				<span class="underline-hover dark:after:bg-neutral-50 after:bg-red-600">
+					Back to home
+				</span>
+			</a>
+		</div>
+		<h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards lowercase">Blogs</h1>
 		<ul class="flex flex-col gap-4">
 			{posts.map((post) => (
-				<li class="opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards">
-					<a href={`/blogs/${post.slug.current}`} class="font-medium text-lg mb-4 opacity-[0.01] animate-[fade_0.5s_0.5s_ease-in-out] fill-mode-forwards">{post.title}</a>
-				</li>
+				<Blog post={post} />
 			))}
 		</ul>
 	</header>
