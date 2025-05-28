@@ -10,6 +10,7 @@ import { ThemeSwitcher } from '../../components/ThemeSwitcher';
 import Layout from '../../layouts/Layout.astro';
 import Image from '../../components/Image.astro';
 import Code from '../../components/Code.astro';
+
 export async function getStaticPaths() {
     const posts = await getPosts();
     return posts.map((post) => ({
