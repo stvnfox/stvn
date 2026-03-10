@@ -13,12 +13,12 @@ const data = await getConnect();
             { data.label }
         </h2>
         <div
-            class="connect font-light mb-6"
+            class="connect font-light mb-6 transition-colors"
         >
             <PortableText value={data.introduction}/>
         </div>
         <div class="flex gap-4">
-            { data.connectItems.map((item) => 
+            { data.connectItems.map((item) =>
                 <a
                     href={item.link}
                     target="_blank"

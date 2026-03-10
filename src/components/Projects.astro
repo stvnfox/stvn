@@ -12,7 +12,7 @@ const data = await getProjects();
         >
             { data.label }
         </h2>
-        {data.projectItems.map((item) => 
+        {data.projectItems.map((item) =>
             <div class="mb-3">
                 <a
                     href={item.link}
@@ -42,7 +42,7 @@ const data = await getProjects();
                     </svg>
                 </a>
                 <div
-                    class="project text-sm font-light dark:text-neutral-50 text-red-600"
+                    class="project text-sm font-light dark:text-neutral-50 text-red-600 transition-colors"
                 >
                     <PortableText
                         value={item.explanation}
