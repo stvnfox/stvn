@@ -1,13 +1,17 @@
 import { defineConfig } from "astro/config";
 import sanity from "@sanity/astro";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
-
+import tailwindcss from "@tailwindcss/vite";
 import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
   integrations: [
     sanity({
       projectId: "4xy3zla7",
@@ -17,10 +21,6 @@ export default defineConfig({
       studioBasePath: "/admin",
     }),
     react(),
-    tailwind({
-      applyBaseStyles: false,
-      nesting: true,
-    }),
     icon(),
   ],
   output: "static",

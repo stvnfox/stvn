@@ -1,34 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* v4 theme + config (replaces tailwind.config.mjs) */
+@theme {
+	--font-sans: Lato, sans-serif;
+	--animate-fade: fade 0.5s 0.5s ease-in-out;
+	@keyframes fade {
+		0% {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+/* Dark mode via .dark class (was darkMode: 'selector') */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Container with responsive padding (was theme.container) */
+@utility container {
+	margin-inline: auto;
+	padding-inline: 1rem;
+	@variant sm {
+		padding-inline: 2rem;
+	}
+	@variant lg {
+		padding-inline: 4rem;
+	}
+	@variant xl {
+		padding-inline: 5rem;
+	}
+	@variant 2xl {
+		padding-inline: 6rem;
+	}
+}
 
 @layer base {
-    html {
-        @apply dark:bg-red-600 bg-neutral-50 transition-colors;
-    }
+	html {
+		@apply dark:bg-red-600 bg-neutral-50 transition-colors;
+	}
 
-    body {
-        @apply overflow-x-hidden font-sans;
-    }
+	body {
+		@apply overflow-x-hidden font-sans;
+	}
 }
 
 @layer components {
-    .introduction {
-        p {
-            @apply mb-4 last:mb-0;
-        }
-    }
+	.introduction {
+		p {
+			@apply mb-4 last:mb-0;
+		}
+	}
 
-    .connect,
-    .project {
-        a {
-            @apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:right-0 after:h-px after:bg-red-600 dark:after:bg-neutral-50 hover:text-red-800 dark:hover:text-neutral-50 hover:after:bg-red-800 hover:dark:after:bg-neutral-200 transition-all;
-        }
-    }
+	.connect,
+	.project {
+		a {
+			@apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:right-0 after:h-px after:bg-red-600 dark:after:bg-neutral-50 hover:text-red-800 dark:hover:text-neutral-50 hover:after:bg-red-800 hover:dark:after:bg-neutral-200 transition-all;
+		}
+	}
 }
 
 @layer utilities {
-    .underline-hover {
-        @apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:transition-all after:delay-100 after:ease-in-out group-hover:after:w-full;
-    }
+	.underline-hover {
+		@apply relative after:absolute after:rounded-lg after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:transition-all after:delay-100 after:ease-in-out group-hover:after:w-full;
+	}
 }

@@ -27,16 +27,16 @@ const post = await getPostContent(blog);
 
 <Layout>
     <header class="mt-24">
-        <a href="/blogs" class="flex items-center gap-2 group font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] fill-mode-forwards lowercase underline-hover dark:after:bg-neutral-50 after:bg-red-600">
+        <a href="/blogs" class="flex items-center gap-2 group font-medium mb-4 opacity-[0.01] animate-[fade_0.5s_0.3s_ease-in-out] [animation-fill-mode:forwards] lowercase underline-hover dark:after:bg-neutral-50 after:bg-red-600">
             <Icon name="mdi:arrow-left" class="w-4 h-4" />
             <span class="underline-hover dark:after:bg-neutral-50 after:bg-red-600">
                 Back to blogs
             </span>
         </a>
-        <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">{post.title}</h1>
-        <p class="font-light opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">{post.excerpt}</p>
+        <h1 class="font-medium text-2xl mb-4 opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] [animation-fill-mode:forwards] lowercase">{post.title}</h1>
+        <p class="font-light opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] [animation-fill-mode:forwards] lowercase">{post.excerpt}</p>
     </header>
-    <main class="mb-12 md:mb-24 animate-[fade_0.5s_0.4s_ease-in-out] opacity-[0.01] fill-mode-forwards">
+    <main class="mb-12 md:mb-24 animate-[fade_0.5s_0.4s_ease-in-out] opacity-[0.01] [animation-fill-mode:forwards]">
         {post.mainImage ? (
             <img
                 class="aspect-video relative left-1/2 md:w-[133%] max-w-none -translate-x-1/2 my-6 w-full object-cover"
@@ -44,7 +44,7 @@ const post = await getPostContent(blog);
                 alt=""
             />
         ) : null}
-        <div class="font-light introduction opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] fill-mode-forwards lowercase">
+        <div class="font-light introduction opacity-[0.01] animate-[fade_0.5s_0.4s_ease-in-out] [animation-fill-mode:forwards] lowercase">
             <PortableText
                 value={post.body}
                 components={{

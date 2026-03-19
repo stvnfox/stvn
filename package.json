@@ -10,10 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/react": "^4.3.0",
-    "@astrojs/tailwind": "^5.1.5",
-    "@astrojs/vercel": "^8.1.4",
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/react": "^5.0.1",
+    "@astrojs/vercel": "^10.0.1",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify/tools": "^4.1.2",
     "@portabletext/types": "^2.0.13",
@@ -22,10 +21,11 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/types": "^3.90.0",
     "@sanity/vision": "^3.90.0",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.8.1",
+    "astro": "^6.0.6",
     "astro-font": "^0.0.81",
     "astro-icon": "^1.1.5",
     "astro-portabletext": "^0.10.1",
@@ -35,8 +35,7 @@
     "react-dom": "^18.3.1",
     "sanity": "^3.90.0",
     "styled-components": "^6.1.18",
-    "tailwindcss": "^3.4.17",
-    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss": "^4.2.2",
     "typescript": "^5.8.3"
   },
   "overrides": {
